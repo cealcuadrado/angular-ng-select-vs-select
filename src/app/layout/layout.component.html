@@ -1,1 +1,22 @@
-<p>layout works!</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <div class="form-group">
+      <label>Select</label>
+      <select class="form-control">
+        <option *ngFor="let opcion of opcionesSelect" [value]="opcion">
+          {{opcion}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="form-group">
+      <label>NG-Select</label>
+      <ng-select [multiple]="true">
+        <ng-option *ngFor="let opcion of opcionesSelect" [value]="opcion">
+          {{opcion}}
+        </ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
